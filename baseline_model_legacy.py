@@ -152,13 +152,13 @@ if __name__ == '__main__':
     model.eval()
 
     # Load the dataset using the ImageFolder class
-    dataset= ImageFolder(root='/mobileye/RPT/users/kfirs/kfir_project/adversarials_subset_images',transform=transforms.ToTensor())
+    dataset= ImageFolder(root='PATH TO SAVE THE ADVERSARIAL IMAGES',transform=transforms.ToTensor())
 
     val_dataloader = DataLoader(dataset, batch_size=1, shuffle=False, num_workers=4)
 
     # Define Comet ML Logger
     comet_logger = CometLogger(
-        api_key="jsPqM9osr1ZfIKWiEeiAlitCa",
+        api_key="COMET_API_KEY",
         project_name="adversarial-robustness-nts",
         experiment_name="resnet50_adversarial_attack_super_resolution_x2_with_style_transfer_0.05_sand",
     )

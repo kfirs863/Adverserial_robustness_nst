@@ -16,7 +16,7 @@ from tqdm import tqdm
 from torchvision.transforms.functional import to_pil_image
 
 
-PATH_TO_SAVE = '/mobileye/RPT/users/kfirs/kfir_project/adversarials_subset_images'
+PATH_TO_SAVE = 'PATH TO SAVE THE ADVERSARIAL IMAGES'
 
 with open('imagenet-simple-labels.json') as f:
     labels = json.load(f)
@@ -58,7 +58,7 @@ def create_adversarial_examples(model, images, epsilon=8/256):
 
 
 # Step 1: Load the dataset
-dataset: Dataset = load_dataset('imagenet-1k', cache_dir='/mobileye/RPT/users/kfirs/kfir_project',
+dataset: Dataset = load_dataset('imagenet-1k', cache_dir='PATH TO CACHE DIRECTORY',
                                 trust_remote_code=True, split='validation[:10%]')
 
 # Create a directory to save processed images
